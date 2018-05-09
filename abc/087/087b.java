@@ -12,14 +12,13 @@ public class Main {
 
     for (int i = 0; i <= a; i++) {
       for (int j = 0; j <= b; j++) {
-        for (int k = 0; k <= c; k++) {
-          if (500 * i + 100 * j + 50 * k == x) {
-            answer++;
-          }
-        }
+				int kk = x - 500 * i - 100 * j;
+				int k = kk / 50;
+				if (k >= 0 && k <= c && kk % 50 == 0) {
+					answer++;
+				}
       }
     }
-
     System.out.println(answer);
   }
 }
